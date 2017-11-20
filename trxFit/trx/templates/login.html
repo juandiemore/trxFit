@@ -1,0 +1,36 @@
+{% extends 'base.html'%}
+
+
+{% block content%}
+
+
+<div style="padding-left: 400px;">
+<form method="post">
+		{% csrf_token %}
+
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+		<div class="form-group">
+			<label > Nombre de usuario </label>
+			<input class="form-control" type="text" name="username">
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+		<div class="form-group">
+			<label > Contraseña </label>
+			<input class="form-control" type="password" name="password">
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+		<div class="form-group">
+				<input  class="btn btn-primary" type="submit" value="guardar">
+		</div> 
+	</div>
+</div>
+	</form>
+</div>
+{% endblock %}

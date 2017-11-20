@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load staticfiles %}
+     <link rel="stylesheet" type="text/css" href="{% static 'css/base2.css' %}">
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+  
+
+    <title>TRX fit</title>
+
+   
+      <div id="menu">
+      <ul>  
+      <li>  <a href="/" style="color:white">                    inicio       </a> </li>
+      <li>  <a href="{% url 'ent'%}" style="color:white">   Entrenadores   </a> </li>
+      <li>  <a href="{% url 'Clase' %}" style="color:white"> Inscribir clase        </a> </li>
+      <li>  <a href="{% url 'sedes'%}" style="color:white">   nuestras sedes     </a> </li>
+      {% if user_is_authenticate%}
+         <li>  a </li> 
+      {% else %}
+  
+      <li>  <a href="{% url 'login'%}" style="color:white">  ingresar </a> </li>
+      {% endif %}
+      </ul>
+      </div>
+
+  
+  
+    
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="https://getbootstrap.com/docs/4.0/examples/starter-template/starter-template.css" rel="stylesheet">
+  
+
+  
+
+  
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="/">TRX_FIT</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+    </nav>
+-
+
+
+  {% block content %}
+  {% endblock %}
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

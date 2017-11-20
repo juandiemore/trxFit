@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container">
+
+      <div class="starter-template" id="py">
+        <h1 style="color:green; ">Trx Fit sedes</h1>
+        <p class="lead" style="color:green;">nuestras sedes TRX FIT.</p>
+
+
+          <ul>
+              {% for pr in sedess %}
+              <li> {{ pr.Nombre }} </li>
+              
+              ubicada en: <li>{{pr.ciudad}}</li>
+
+              <img src="{{ pr.imagen.url }}" alt="">
+              <br>
+              <br>
+              {% endfor %}
+          </ul>
+        
+        
+               <ul>
+  
+      </div>
+
+    </div><!-- /.container -->
+    
+{% endblock %}
